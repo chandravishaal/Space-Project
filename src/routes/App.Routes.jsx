@@ -7,7 +7,7 @@ import MainLayout from '../layout/MainLayouts';
 import Tools from '../pages/Tools/Tools';
 import Contact from '../pages/Contact';
 import Store from '../pages/Store/Store';
-import BlogPost from '../pages/Blog/Blogpost';
+import BlogPost from '../pages/Blog/BlogNew';
 
 const AppRoutes = () => {
   return (
@@ -16,7 +16,7 @@ const AppRoutes = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/blog/:slug" element={<BlogPost/>} />
         <Route path="/store" element={<Store />} />
         <Route path="/tools" element={<Tools/>} />
         <Route path="/contact" element={<Contact />} />
