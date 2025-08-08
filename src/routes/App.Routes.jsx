@@ -2,12 +2,12 @@ import { Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home/Home';
 import About from '../pages/About/About';
 import Blog from '../pages/Blog/Blog';
-import BlogPost from '../pages/Blog/BlogPost';//changed file name 
 import NotFound from '../pages/NotFound';
 import MainLayout from '../layout/MainLayouts';
 import Tools from '../pages/Tools/Tools';
 import Contact from '../pages/Contact';
 import Store from '../pages/Store/Store';
+import BlogPost from '../pages/Blog/Blogpost';
 
 const AppRoutes = () => {
   return (
