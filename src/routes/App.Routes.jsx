@@ -8,6 +8,7 @@ import Tools from '../pages/Tools/Tools';
 import Contact from '../pages/Contact';
 import Store from '../pages/Store/Store';
 import BlogPost from '../pages/Blog/BlogNew';
+import TestParticles from '../pages/StarPartTest';
 
 const AppRoutes = () => {
   return (
@@ -20,6 +21,8 @@ const AppRoutes = () => {
         <Route path="/store" element={<Store />} />
         <Route path="/tools" element={<Tools/>} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/test-particles" element={<TestParticles />} />
+
 
       </Route>
 
