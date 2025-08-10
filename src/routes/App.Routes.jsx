@@ -9,6 +9,7 @@ import Contact from '../pages/Contact';
 import Store from '../pages/Store/Store';
 import BlogPost from '../pages/Blog/BlogNew';
 import TestParticles from '../pages/StarPartTest';
+import BlackHole from '../pages/Blackhole/BlackHole';
 
 const AppRoutes = () => {
   return (
@@ -22,6 +23,7 @@ const AppRoutes = () => {
         <Route path="/tools" element={<Tools/>} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/test-particles" element={<TestParticles />} />
+        <Route path="/blackhole" element={<BlackHole/>}/>
 
 
       </Route>
