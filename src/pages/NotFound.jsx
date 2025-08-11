@@ -1,22 +1,22 @@
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { Link, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import StarParticles from "../components/common/StarParticles";
+import CosmicButton from "../components/common/Buttons";
 
 const NotFound = () => {
+  const navigate = useNavigate();
   return (
     <motion.section
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.6 }}
-      className="min-h-screen bg-gradient-to-b from-black via-gray-900 to-black text-white flex items-center justify-center px-4 relative overflow-hidden"
+      className="min-h-screen text-white flex items-center justify-center px-4 relative overflow-hidden"
     >
-      {/* Starry Background */}
-      <motion.div
-        className="absolute inset-0 bg-[radial-gradient(white,transparent_30%)] opacity-10 z-0 animate-pulse"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.1 }}
-        transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
-      />
+      {/* Star Particles Background */}
+      <div style={{ position: "fixed", inset: 0, zIndex: 0 }}>
+        <StarParticles />
+      </div>
 
       {/* 404 Content */}
       <motion.div
@@ -34,12 +34,11 @@ const NotFound = () => {
         <p className="mb-8 text-gray-500">
           But don’t worry, we’ve found a wormhole back to the home planet.
         </p>
-        <Link
-          to="/"
-          className="inline-block px-6 py-3 rounded-lg border border-gray-700 hover:bg-gray-800 transition-colors duration-300 text-white font-semibold"
-        >
-          Return to Home Planet!
-        </Link>
+        
+        {/* Button to return home */}
+        <CosmicButton onClick={() => navigate("/")}>
+          Return To Home Planet!
+        </CosmicButton>{" "}
       </motion.div>
     </motion.section>
   );

@@ -11,10 +11,7 @@ const Store = () => {
       {/* ✅ Added relative so particles position correctly */}
       <section className="relative min-h-[80vh] py-20 px-6 max-w-4xl mx-auto text-white">
         
-        {/* ✅ Particles in background */}
-        <div className="absolute inset-0">
-          <StarParticles />
-        </div>
+        
 
         {/* ✅ Content stays above particles with z-index */}
         <motion.h1
