@@ -36,7 +36,7 @@ const Navbar = () => {
             <li key={link.to}>
               <Link
                 to={link.to}
-                className="hover:text-[#AB79B3] transition-colors duration-200"
+                className="hover:text-[#7d108e] transition-colors duration-200"
               >
                 {link.name}
               </Link>

@@ -1,71 +1,3 @@
-// import React, { useCallback } from "react";
-// import Particles from "react-tsparticles";
-// import { loadFull } from "tsparticles";
-
-// const StarParticles = () => {
-//   const particlesInit = useCallback(async (engine) => {
-//     await loadFull(engine);
-//   }, []);
-
-//   return (
-//     <Particles
-//       init={particlesInit}
-//       options={{
-//         fullScreen: { enable: false }, // stays inside parent container
-//         background: { color: "transparent" },
-//         particles: {
-//           number: {
-//             value: 80, // fewer stars for subtle effect
-//             density: { enable: true, area: 800 }
-//           },
-//           color: { value: "#ffffff" }, // only white
-//           shape: { type: "circle" },
-//           opacity: {
-//             value: 1,
-//             random: true,
-//             animation: {
-//               enable: true,
-//               speed: 0.6,
-//               minimumValue: 0.3
-//             }
-//           },
-//           size: {
-//             value: { min: 0.5, max: 1.5 }, // tiny stars
-//             random: true
-//           },
-//           move: {
-//             enable: true,
-//             speed: 0.05, // very slow drift
-//             direction: "none",
-//             random: true,
-//             outModes: { default: "out" }
-//           },
-//           twinkle: {
-//             particles: {
-//               enable: true,
-//               frequency: 0.05,
-//               opacity: 1
-//             }
-//           }
-//         },
-//         detectRetina: true
-//       }}
-//       style={{
-//         position: "absolute",
-//         inset: 0,
-//         width: "100%",
-//         height: "100%",
-//         pointerEvents: "none" // allows clicks through
-//       }}
-//     />
-//   );
-// };
-
-// export default StarParticles;
-
-
-
-// components/common/StarParticles.jsx
 import React, { useRef, useEffect } from "react";
 
 const StarParticles = () => {
@@ -153,7 +85,7 @@ const StarParticles = () => {
         left: 0,
         width: "100%",
         height: "100%",
-        pointerEvents: "none", // So it never blocks clicks
+        pointerEvents: "none",  
         zIndex: 0
       }}
     />
