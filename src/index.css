@@ -8,3 +8,32 @@
   }
 }
 /* for dark background color  */
+
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Only animate when hovered */
+.animate-on-hover:hover {
+  animation: gradient-move 2.5s linear infinite;
+}
+
+
+
+/* --- custom global styles and utility imports --- */
+@import './styles/cosmic-border.css';
+@import './styles/button.css';
+
+:root{
+  --cosmic-purple: #56056c;
+  --cosmic-pink: #fe00b8;
+}

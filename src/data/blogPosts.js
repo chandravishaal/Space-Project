@@ -1,7 +1,7 @@
 const blogPosts = [
   {
     id: 'death-of-a-star',
-    title: 'The Death of a Star',
+    title: 'THE DEATH OF A STAR',
     snippet: 'Explore the final moments of massive stars and what follows...',
     content: `Stars, like all things in the universe, have lifespans. When a massive star exhausts its nuclear fuel, it can no longer counterbalance the force of gravity pulling it inward. The outer layers may explode in a dramatic supernova, spreading elements across the cosmos. What's left behind depends on the star's mass. Smaller massive stars collapse into neutron stars—ultra-dense objects that pack the mass of the Sun into a sphere the size of a city. Even more massive stars collapse into black holes, points of infinite density where not even light can escape. These remnants are not just fascinating; they play critical roles in galactic evolution and may even seed the formation of future stars and planets.`
   },

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import BlackHole from "../../components/blackhole/BlackHole";
+import CosmicButton from "../common/Buttons";
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -24,20 +25,17 @@ const HeroSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        <motion.h1
-          className="text-4xl md:text-6xl font-extrabold mb-3"
-          initial={{ scale: 0.95 }}
-          animate={{ scale: 1 }}
+        <motion.img
+          src="/name.png"
+          alt="name"
+          className="mx-auto mt-64 filter brightness-0 w-[90vw] max-w-[700px]"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", duration: 1.5 }}
-        >
-          astrosapientes
-        </motion.h1>
-        <p className="text-sm text-gray-400 mb-6 tracking-widest">
+        />
+
+        <p className="text-sm text-black mb-6 tracking-widest">
           FROM STRINGS TO SINGULARITY
-        </p>
-        <p className="text-xl text-gray-300 max-w-xl mx-auto">
-          This cosmic space is under development. Something extraordinary is in
-          the making.
         </p>
       </motion.div>
 
@@ -48,25 +46,21 @@ const HeroSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.8 }}
       >
-        <motion.button
-          onClick={() => navigate("/blackhole")}
-          className="px-6 py-3 bg-white/10 border border-white/20 rounded-full text-lg font-semibold hover:bg-white/20 transition-colors"
+        <motion.div
+          // onClick={() => navigate("/blackhole")}
+          // className="px-6 py-3 bg-white/10 border border-white/20 rounded-full text-lg font-semibold hover:bg-white/20 transition-colors"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          Event Horizon
-        </motion.button>
+          <CosmicButton onClick={() => navigate("/blackhole")} >Enter Event Horizon</CosmicButton>
+          {/* <button onClick={() => navigate("/blackhole")} > Enter Event Horizon</button> */}
+        </motion.div>
       </motion.div>
     </section>
   );
 };
 
 export default HeroSection;
- 
-
-
-
-
 
 //THE BELOW IS BASIC BLACKHOLE , WILL NOT BE USED
 // import React, { useRef } from 'react';
@@ -209,7 +203,7 @@ export default HeroSection;
 //   const vertexShader = `
 //     varying vec2 vUv;
 //     varying vec3 vPosition;
-    
+
 //     void main() {
 //       vUv = uv;
 //       vPosition = position;
@@ -225,17 +219,17 @@ export default HeroSection;
 //     uniform float u_innerRadius;
 //     uniform float u_outerRadius;
 //     uniform float u_opacity;
-    
+
 //     varying vec2 vUv;
 //     varying vec3 vPosition;
-    
+
 //     // small random-ish function for subtle turbulence
 //     float hash21(vec2 p){
 //       p = fract(p * vec2(123.34, 456.21));
 //       p += dot(p, p + 45.32);
 //       return fract(p.x * p.y);
 //     }
-    
+
 //     void main() {
 //       // ring UVs: vUv from ringGeometry typically maps 0..1 across geometry.
 //       // center at 0.5 to get a radial coordinate similar to previous code.
@@ -244,12 +238,12 @@ export default HeroSection;
 //       float aspectComp = 1.0; // we keep scale within ring geometry
 //       uv.x *= aspectComp;
 //       float dist = length(uv);
-      
+
 //       // map dist into normalized ring coordinate in [0..1] where 0 at inner and 1 at outer
 //       float innerEdge = 0.1; // visually tuned baseline mapping (kept similar to your map)
 //       float outerEdge = 0.45;
 //       // create mask from geometry's intrinsic mapping (kept for compatibility)
-//       float ringMask = smoothstep(innerEdge - 0.02, innerEdge, dist) * 
+//       float ringMask = smoothstep(innerEdge - 0.02, innerEdge, dist) *
 //                        (1.0 - smoothstep(outerEdge, outerEdge + 0.02, dist));
 //       ringMask = clamp(ringMask, 0.0, 1.0);
 
@@ -257,10 +251,10 @@ export default HeroSection;
 //       float radialNorm = clamp((dist - innerEdge) / max(0.0001, (outerEdge - innerEdge)), 0.0, 1.0);
 //       float radialGrad = 1.0 - radialNorm;
 //       radialGrad = pow(radialGrad, 1.8); // stronger inner concentration (emissivity-like)
-      
+
 //       // azimuth angle (0..2PI)
 //       float angle = atan(uv.y, uv.x); // in radians
-      
+
 //       // Use actual mesh rotation angle u_rotAngle so doppler hotspot is physically tied to rotation
 //       // Angle difference between a point and rotation gives whether it's approaching or receding
 //       float angDiff = angle - u_rotAngle;
@@ -343,8 +337,3 @@ export default HeroSection;
 //     </mesh>
 //   );
 // }
-
-
-
-
-
